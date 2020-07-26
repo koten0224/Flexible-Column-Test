@@ -13,7 +13,7 @@
 flexible_column :title, default: "lalala", type: :string
 ```
 
-就可以為此 ORM 物件加上一個實體屬性，資料會存在 attributes table
+如範例就可以為此 ORM 物件加上兩個 instance method 'title' and 'title='，而資料會存在 attributes table
 
 可以設定預設值以及資料型態
 
@@ -21,4 +21,6 @@ flexible_column :title, default: "lalala", type: :string
 
 flexible_column 用到了 meta programming
 
-自動為您的 ORM 物件加上指定的一組 method ，一讀一寫。
+自動為您的 ORM 物件加上指定的method
+
+操作上就像是 has_many 或者 belongs_to 一樣
