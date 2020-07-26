@@ -24,3 +24,9 @@ flexible_column 用到了 meta programming
 自動為您的 ORM 物件加上指定的method
 
 操作上就像是 has_many 或者 belongs_to 一樣
+
+但當然實際使用上不如 Rails 內建的 ORM 物件的 columns 那樣便利
+
+不支援像是 Class.create(params)這樣的 Rails 語法
+
+就是一種嘗試吧～:P
