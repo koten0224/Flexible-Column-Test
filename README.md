@@ -1,24 +1,24 @@
-# README
+嘗試使用一張多型關聯表 attributes 來分散儲存其他 model 的 columns
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+將原本 model 的 columns 拆成一個個的 column name 與 value
 
-Things you may want to cover:
+一筆一筆存入 attributes table
 
-* Ruby version
+應用的 model 可以不需要增加任何的 column
 
-* System dependencies
+只需要在 model 層加上
 
-* Configuration
 
-* Database creation
+```=ruby
+flexible_column :title, default: "lalala", type: :string
+```
 
-* Database initialization
+就可以為此 ORM 物件加上一個實體屬性，資料會存在 attributes table
 
-* How to run the test suite
+可以設定預設值以及資料型態
 
-* Services (job queues, cache servers, search engines, etc.)
+可以達成隨時隨意增刪 model 欄位的效果
 
-* Deployment instructions
+flexible_column 用到了 meta programming
 
-* ...
+自動為您的 ORM 物件加上指定的一組 method ，一讀一寫。
